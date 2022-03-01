@@ -15,6 +15,9 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     bzip2-dev \
     postgresql-dev \
     zip \
+    libzip-dev \
+    libxslt-dev \
+    libgcrypt-dev \
     $PHPIZE_DEPS
 
 # Add Production Dependencies
@@ -44,7 +47,9 @@ RUN docker-php-ext-configure \
     bz2 \
     pcntl \
     bcmath \
-    exif
+    exif \
+    zip \
+    xsl
     
 # pecl install redis & Install redis Extension
 RUN pecl install redis \
