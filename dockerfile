@@ -18,6 +18,7 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     libzip-dev \
     libxslt-dev \
     libgcrypt-dev \
+    libxslt \
     $PHPIZE_DEPS
 
 # Add Production Dependencies
