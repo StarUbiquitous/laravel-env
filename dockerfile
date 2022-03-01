@@ -26,10 +26,7 @@ RUN apk add --update --no-cache \
     nano \
     icu-dev \
     freetype-dev \
-    libpq \
-    libzip-dev \
-    libxslt-dev \
-    libgcrypt-dev
+    libpq
 
 # Configure & Install Extension
 RUN docker-php-ext-configure \
@@ -49,8 +46,7 @@ RUN docker-php-ext-configure \
     pcntl \
     bcmath \
     exif \
-    zip \
-    xsl
+    zip 
 
     
 # pecl install redis & Install redis Extension
