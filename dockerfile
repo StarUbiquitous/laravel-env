@@ -18,7 +18,6 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     libzip-dev \
     libxslt-dev \
     libgcrypt-dev \
-    libxslt \
     $PHPIZE_DEPS
 
 # Add Production Dependencies
@@ -55,6 +54,3 @@ RUN docker-php-ext-configure \
 # pecl install redis & Install redis Extension
 RUN pecl install redis \
     && docker-php-ext-enable redis
-
-RUN apk del -f .build-deps
-
