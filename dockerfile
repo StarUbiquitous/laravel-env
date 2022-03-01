@@ -15,9 +15,10 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     zlib1g-dev \
     libzip-dev \
     postgresql-dev \
+    zip \
+    libzip-dev \
     libxslt-dev \
     libgcrypt-dev \
-    zip \
     $PHPIZE_DEPS
 
 # Add Production Dependencies
@@ -28,7 +29,8 @@ RUN apk add --update --no-cache \
     nano \
     icu-dev \
     freetype-dev \
-    libpq
+    libpq \
+
 
 # Configure & Install Extension
 RUN docker-php-ext-configure \
