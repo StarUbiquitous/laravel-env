@@ -44,9 +44,7 @@ RUN docker-php-ext-configure \
     pcntl \
     bcmath \
     exif \
-    xml \
-    xsl \
-    dompdf 
+    xml 
 
     
 # pecl install redis & Install redis Extension
