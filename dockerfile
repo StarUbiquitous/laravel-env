@@ -1,5 +1,6 @@
 FROM php:8.0-fpm-alpine3.13
 
+RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories 
 RUN set -ex; \
     apk update; \
     apk upgrade; \
@@ -12,8 +13,6 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     libpng-dev \
     libxml2-dev \
     bzip2-dev \
-    zlib1g-dev \
-    libzip-dev \
     postgresql-dev \
     zip \
     $PHPIZE_DEPS
@@ -45,9 +44,7 @@ RUN docker-php-ext-configure \
     bz2 \
     pcntl \
     bcmath \
-    exif \
-    zip 
-
+    exif
     
 # pecl install redis & Install redis Extension
 RUN pecl install redis \
