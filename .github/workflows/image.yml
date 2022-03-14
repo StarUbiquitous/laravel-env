@@ -42,7 +42,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            starubiquitous/laravel-en
+            starubiquitous/laravel-env
           tags: |
             type=schedule
             type=ref,event=branch
