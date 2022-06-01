@@ -13,6 +13,7 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     libxml2-dev \
     bzip2-dev \
     postgresql-dev \
+    imagemagick-dev \
     zip \
     libzip-dev \
     libxslt-dev \
@@ -49,7 +50,13 @@ RUN docker-php-ext-configure \
     exif \
     zip \
     xsl
-    
+
 # pecl install redis & Install redis Extension
 RUN pecl install redis \
     && docker-php-ext-enable redis
+
+RUN pecl install imagick; \
+    docker-php-ext-enable imagick
+
+RUN apk del $PHPIZE_DEPS; \
+    rm -rf /var/cache/apk/*
