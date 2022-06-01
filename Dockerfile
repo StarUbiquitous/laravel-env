@@ -1,6 +1,5 @@
 FROM php:8.0-fpm-alpine3.13
 
-RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" /etc/apk/repositories 
 RUN set -ex; \
     apk update; \
     apk upgrade; \
