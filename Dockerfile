@@ -13,6 +13,7 @@ RUN apk update && apk add --no-cache --virtual .build-deps  \
     libxml2-dev \
     bzip2-dev \
     postgresql-dev \
+    imagemagick \
     imagemagick-dev \
     zip \
     libzip-dev \
