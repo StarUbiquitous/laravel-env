@@ -18,6 +18,7 @@ jobs:
     uses: XNXKTech/workflows/.github/workflows/docker-build.yml@main
     with:
       registry: 'registry.xnxktech.net'
+      platforms: linux/amd64,linux/arm64
     secrets:
       USERNAME: ${{ secrets.REGISTRY_USER }}
       PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
