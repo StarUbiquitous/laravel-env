@@ -1,5 +1,8 @@
 # Laravel Env
-[![Build Images](https://github.com/StarUbiquitous/laravel-env/actions/workflows/build.yml/badge.svg)](https://github.com/StarUbiquitous/laravel-env/actions/workflows/build.yml)
+
+![Docker Pulls](https://img.shields.io/docker/pulls/starubiquitous/laravel-env?style=flat-square)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/starubiquitous/laravel-env?style=flat-square)
+
 ![Platform](https://img.shields.io/badge/Platform-linux%2Famd64-brightgreen?style=flat-square&logo=linux)
 ![Platform](https://img.shields.io/badge/Platform-linux%2Farm64-brightgreen?style=flat-square&logo=linux)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/starubiquitous/laravel-env/main?style=flat-square)
@@ -8,6 +11,13 @@
 [![996.icu](https://img.shields.io/badge/Link-996.icu-red.svg?style=flat-square)](https://996.icu)
 
 Laravel Application needed environment image with redis imagick and postgresql based on alpine platform.
+
+## Available Environments
+
+| Environment                              | YAML Label       | CI Status                                                                                                                                                                                               |
+|------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHP 8.1 with Alpine 3.16 <sup>Beta</sup> | `8.1-alpine3.16` | [![Build Images](https://github.com/StarUbiquitous/laravel-env/actions/workflows/build.yml/badge.svg?branch=8.1-alpine3.16)](https://github.com/StarUbiquitous/laravel-env/actions/workflows/build.yml) |
+| PHP 8.0 with Alpine 3.13                 | `latest`         | [![Build Images](https://github.com/StarUbiquitous/action-runner/actions/workflows/build.yml/badge.svg)](https://github.com/StarUbiquitous/action-runner/actions/workflows/build.yml)                   |
 
 ## License
 
